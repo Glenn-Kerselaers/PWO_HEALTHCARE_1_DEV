@@ -1,0 +1,15 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[16:53:50] Opening Graph window
+ 
+[16:55:15] Opening Animation window
+ 
+[16:55:25] Scanning Serial Ports.
+Available Serial Ports:
+No Serial Ports available. Check hardware and re-scan.
+ 

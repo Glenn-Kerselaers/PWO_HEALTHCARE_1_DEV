@@ -1,0 +1,12 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[22:44:43] Scanning Serial Ports.
+Available Serial Ports:
+COM3
+COM7
+ 

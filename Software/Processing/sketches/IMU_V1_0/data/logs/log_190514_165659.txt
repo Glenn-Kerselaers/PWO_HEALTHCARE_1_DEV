@@ -1,0 +1,16 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[16:56:29] Send <IMU #1>: Hi
+[16:56:29] [ERROR] Receiver is not connected.
+ 
+[16:56:50] Send <IMU #2>: hi
+[16:56:50] [ERROR] Receiver is not connected.
+ 
+[16:56:57] Send <Broadcast>: hi
+[16:56:57] [ERROR] One of the receivers is not connected.
+ 
