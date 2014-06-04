@@ -45,7 +45,8 @@ void draw() {
 
   if (startCom == true) {
     printValues();
-  }
+  } 
+
   drawAnimation();
 }
 
@@ -125,25 +126,20 @@ void sendMessage() {
   if (dropList_whoSend.getSelectedIndex() == 0) {
     if (myIMU1.com.serialConnected == true) {
       myIMU1.com.port.write(sInput);
-    }
-    else {
+    } else {
       textarea_console.appendText(timeStamp + "[ERROR] Receiver is not connected.");
     }
-  }
-  else if (dropList_whoSend.getSelectedIndex() == 1) {
+  } else if (dropList_whoSend.getSelectedIndex() == 1) {
     if (myIMU2.com.serialConnected == true) {
       myIMU2.com.port.write(sInput);
-    }
-    else {
+    } else {
       textarea_console.appendText(timeStamp + "[ERROR] Receiver is not connected.");
     }
-  }
-  else if (dropList_whoSend.getSelectedIndex() == 2) {
+  } else if (dropList_whoSend.getSelectedIndex() == 2) {
     if ((myIMU1.com.serialConnected == true) && (myIMU2.com.serialConnected == true)) {
       myIMU1.com.port.write(sInput);
       myIMU2.com.port.write(sInput);
-    }
-    else {
+    } else {
       textarea_console.appendText(timeStamp + "[ERROR] One of the receivers is not connected.");
     }
   }
@@ -160,8 +156,7 @@ void connectIMU(IMU thisIMU) {
     whichIMU = 1;
     port = dropList_com1.getSelectedText();
     baudRate = int(dropList_baud1.getSelectedText());
-  }
-  else if (thisIMU == myIMU2) { 
+  } else if (thisIMU == myIMU2) { 
     whichIMU = 2;
     port = dropList_com2.getSelectedText();
     baudRate = int(dropList_baud2.getSelectedText());
@@ -183,8 +178,7 @@ void connectIMU(IMU thisIMU) {
         dropList_baud1.setEnabled(false);
         button_connect1.setText("Disconnect");
         button_connect1.setTextBold();
-      }
-      else if (whichIMU == 2) {
+      } else if (whichIMU == 2) {
         dropList_com2.setEnabled(false);
         dropList_baud2.setEnabled(false);
         button_connect2.setText("Disconnect");
@@ -195,20 +189,17 @@ void connectIMU(IMU thisIMU) {
       textarea_console.appendText(timeStamp + "Connecting IMU #" + whichIMU + ".");
       textarea_console.appendText("IMU #" + whichIMU + " connected.");
       textarea_console.appendText("    Port: " + port + "  BaudRate: " + thisIMU.com.baudRate);
-    }
-    else {
+    } else {
       textarea_console.appendText(timeStamp + "[ERROR]: Port is already occupied.");
     }
-  }
-  else {
+  } else {
     thisIMU.com.serialConnected = false;
     if (whichIMU == 1) {
       dropList_com1.setEnabled(true);
       dropList_baud1.setEnabled(true);
       button_connect1.setText("Connect");
       button_connect1.setTextBold();
-    }
-    else if (whichIMU == 2) {
+    } else if (whichIMU == 2) {
       dropList_com2.setEnabled(true);
       dropList_baud2.setEnabled(true);
       button_connect2.setText("Connect");
@@ -217,9 +208,11 @@ void connectIMU(IMU thisIMU) {
 
     thisIMU.com.port.stop();
     thisIMU.com.sPort = "";
+
     textarea_console.appendText(timeStamp + "Disconnecting IMU #" + whichIMU + ".");
   }
   textarea_console.appendText(" ");
+  thisIMU.com.port.clear();
 }
 
 void startCommunication() {
@@ -229,13 +222,14 @@ void startCommunication() {
     button_start.setText("Stop");
     textarea_console.appendText(timeStamp + "Communication Started.");
     if (myIMU1.com.serialConnected == true) {
+      myIMU1.com.port.clear();
       myIMU1.com.port.write("A");
     }
     if (myIMU2.com.serialConnected == true) {
+      myIMU2.com.port.clear();
       myIMU2.com.port.write("A");
     }
-  }
-  else {
+  } else {
     startCom = false;
     button_start.setText("Start");
     textarea_console.appendText(timeStamp + "Communication Stopped.");
@@ -261,8 +255,7 @@ void findSerials() {
   textarea_console.appendText("Available Serial Ports:");
   if (s.equals("")) {
     textarea_console.appendText("No Serial Ports available. Check hardware and re-scan.");
-  }
-  else {
+  } else {
     textarea_console.appendText(s);
     button_connect1.setEnabled(true);
     button_connect2.setEnabled(true);
@@ -277,7 +270,7 @@ void printValues() {
   thisIMU = new IMU();
 
   // debug text
-  for (int i = 0; i < 2 ; i++) {
+  for (int i = 0; i < 2; i++) {
     if (i == 0) {
       thisIMU = myIMU1;
     }
@@ -307,7 +300,6 @@ void customGUI() {
   dropList_com2.setItems(loadStrings("data/availableSerial"), 0);
   dropList_baud1.setItems(loadStrings("data/availableBaudRate"), 4);
   dropList_baud2.setItems(loadStrings("data/availableBaudRate"), 4);
-  textarea_console.setEnabled(false);
   button_start.setText("Start");
   button_start.setTextBold();
   button_connect1.setText("Connect");
@@ -336,8 +328,7 @@ void serialEvent(Serial thisPort) {
   // check which port caused the serial event
   if (thisPort == myIMU1.com.port) {
     thisIMU = myIMU1;
-  }
-  else if (thisPort == myIMU2.com.port) {
+  } else if (thisPort == myIMU2.com.port) {
     thisIMU = myIMU2;
   }
 
@@ -345,7 +336,7 @@ void serialEvent(Serial thisPort) {
   int inByte = thisPort.read();
 
   // read the serial buffer:
-  String myString = thisIMU.com.port.readStringUntil(linefeed);
+  String myString = thisPort.readStringUntil(linefeed);
 
   // if you got any bytes other than the linefeed:
   if (myString != null) {
@@ -365,5 +356,6 @@ void serialEvent(Serial thisPort) {
     thisIMU.value.compAngleY = value[8];
     thisIMU.value.tempCal    = value[9];
   }
+  println("Received: " + inByte + " . From IMU#" + thisIMU);
 }
 

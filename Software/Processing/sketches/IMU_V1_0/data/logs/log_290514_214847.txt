@@ -1,0 +1,130 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[21:48:19] Scanning Serial Ports.
+Available Serial Ports:
+COM3
+COM4
+ 
+[21:48:21] Connecting IMU #1.
+IMU #1 connected.
+    Port: COM3  BaudRate: 9600
+ 
+[21:48:28] Send <IMU #1>: h
+ 
+[21:48:30] Communication Started.
+ 
+[21:48:30] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:30] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:30] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:30] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:31] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:31] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:32] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:32] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:33] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:33] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:34] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:34] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:35] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:35] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:36] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:36] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:38] Reading of IMU#1:
+Raw acc: 0  -3136  158
+Raw gyro: 185  27  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:38] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[21:48:38] Communication Stopped.
+ 

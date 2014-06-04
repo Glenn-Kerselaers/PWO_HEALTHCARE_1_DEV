@@ -77,27 +77,6 @@ public void drawGraph() {
   // link the update points back to the layer
   time_Graph = millis() - startTime_Graph;
 
-  myIMU2.graph.points.accX.add(time_Graph, myIMU2.value.accX, "(" + time_Graph + " , " + myIMU2.value.accX + ")");
-  plot2.setPoints(myIMU2.graph.points.accX, "accX 2");
-  myIMU2.graph.points.accY.add(time_Graph, myIMU2.value.accY, "(" + time_Graph + " , " + myIMU2.value.accY + ")");
-  plot2.setPoints(myIMU2.graph.points.accY, "accY 2");
-  myIMU2.graph.points.accZ.add(time_Graph, myIMU2.value.accZ, "(" + time_Graph + " , " + myIMU2.value.accZ + ")");
-  plot2.setPoints(myIMU2.graph.points.accZ, "accZ 2");
-  myIMU2.graph.points.gyroX.add(time_Graph, myIMU2.value.gyroX, "(" + time_Graph + " , " + myIMU2.value.gyroX + ")");
-  plot2.setPoints(myIMU2.graph.points.gyroX, "gyroX 2");
-  myIMU2.graph.points.gyroY.add(time_Graph, myIMU2.value.gyroY, "(" + time_Graph + " , " + myIMU2.value.gyroY + ")");
-  plot2.setPoints(myIMU2.graph.points.gyroY, "gyroY 2");
-  myIMU2.graph.points.gyroZ.add(time_Graph, myIMU2.value.gyroZ, "(" + time_Graph + " , " + myIMU2.value.gyroZ + ")");
-  plot2.setPoints(myIMU2.graph.points.gyroZ, "gyroZ 2");
-  myIMU2.graph.points.compAngleX.add(time_Graph, myIMU2.value.compAngleX, "(" + time_Graph + " , " + myIMU2.value.compAngleX + ")");
-  plot2.setPoints(myIMU2.graph.points.compAngleX, "compAngleX 2");
-  myIMU2.graph.points.compAngleY.add(time_Graph, myIMU2.value.compAngleY, "(" + time_Graph + " , " + myIMU2.value.compAngleY + ")");
-  plot2.setPoints(myIMU2.graph.points.compAngleY, "compAngleY 2");
-  myIMU2.graph.points.tempRaw.add(time_Graph, myIMU2.value.tempRaw, "(" + time_Graph + " , " + myIMU2.value.tempRaw + ")");
-  plot2.setPoints(myIMU2.graph.points.tempRaw, "tempRaw 2");
-  myIMU2.graph.points.tempCal.add(time_Graph, myIMU2.value.tempCal, "(" + time_Graph + " , " + myIMU2.value.tempCal + ")");
-  plot2.setPoints(myIMU2.graph.points.tempCal, "tempCal 2");
-
   plot1.beginDraw();
   plot1.drawBackground();
   plot1.drawBox();
@@ -107,7 +86,6 @@ public void drawGraph() {
   plot1.drawRightAxis();
   plot1.drawTitle();
   plot1.drawLabels();
-
   if (checkbox_accX1.isSelected() == true) {
     myIMU1.graph.points.accX.add(time_Graph, myIMU1.value.accX, "(" + "accX1" + "," + time_Graph + " , " + myIMU1.value.accX + ")");
     plot1.setPoints(myIMU1.graph.points.accX, "accX 1");
@@ -156,7 +134,6 @@ public void drawGraph() {
   if (checkbox_tempCal1.isSelected() == true) {
     myIMU1.graph.points.tempCal.add(time_Graph, myIMU1.value.tempCal, "(" + "tempCal1" + "," + time_Graph + " , " + myIMU1.value.tempCal + ")");
     plot1.setPoints(myIMU1.graph.points.tempCal, "tempCal 1");
-
     plot1.getLayer("tempCal 1").drawLines();
   }
   plot1.endDraw();
@@ -170,16 +147,56 @@ public void drawGraph() {
   plot2.drawRightAxis();
   plot2.drawTitle();
   plot2.drawLabels();
-  if (checkbox_accX2.isSelected() == true)plot2.getLayer("accX 2").drawLines();
-  if (checkbox_accY2.isSelected() == true)plot2.getLayer("accY 2").drawLines();
-  if (checkbox_accZ2.isSelected() == true)plot2.getLayer("accZ 2").drawLines();
-  if (checkbox_gyroX2.isSelected() == true)plot2.getLayer("gyroX 2").drawLines();
-  if (checkbox_gyroY2.isSelected() == true)plot2.getLayer("gyroY 2").drawLines();
-  if (checkbox_gyroZ2.isSelected() == true)plot2.getLayer("gyroZ 2").drawLines();
-  if (checkbox_compAngleX2.isSelected() == true)plot2.getLayer("compAngleX 2").drawLines();
-  if (checkbox_compAngleY2.isSelected() == true)plot2.getLayer("compAngleY 2").drawLines();
-  if (checkbox_tempRaw2.isSelected() == true)plot2.getLayer("tempRaw 2").drawLines();
-  if (checkbox_tempCal2.isSelected() == true)plot2.getLayer("tempCal 2").drawLines();
+  if (checkbox_accX2.isSelected() == true) {
+    myIMU2.graph.points.accX.add(time_Graph, myIMU2.value.accX, "(" + "accX2" + "," + time_Graph + " , " + myIMU2.value.accX + ")");
+    plot2.setPoints(myIMU2.graph.points.accX, "accX 2");
+    plot2.getLayer("accX 2").drawLines();
+  }
+  if (checkbox_accY2.isSelected() == true) {
+    myIMU2.graph.points.accY.add(time_Graph, myIMU2.value.accY, "(" + "accY2" + "," + time_Graph + " , " + myIMU2.value.accY + ")");
+    plot2.setPoints(myIMU2.graph.points.accY, "accY 2");
+    plot2.getLayer("accY 2").drawLines();
+  }
+  if (checkbox_accZ2.isSelected() == true) {
+    myIMU2.graph.points.accZ.add(time_Graph, myIMU2.value.accZ, "(" + "accZ2" + "," + time_Graph + " , " + myIMU2.value.accZ + ")");
+    plot2.setPoints(myIMU2.graph.points.accZ, "accZ 2");
+    plot2.getLayer("accZ 2").drawLines();
+  }
+  if (checkbox_gyroX2.isSelected() == true) {
+    myIMU2.graph.points.gyroX.add(time_Graph, myIMU2.value.gyroX, "(" + "gyroX2" + "," + time_Graph + " , " + myIMU2.value.gyroX + ")");
+    plot2.setPoints(myIMU2.graph.points.gyroX, "gyroX 2");
+    plot2.getLayer("gyroX 2").drawLines();
+  }
+  if (checkbox_gyroY2.isSelected() == true) {
+    myIMU2.graph.points.gyroY.add(time_Graph, myIMU2.value.gyroY, "(" + "gyroY2" + "," + time_Graph + " , " + myIMU2.value.gyroY + ")");
+    plot2.setPoints(myIMU2.graph.points.gyroY, "gyroY 2");
+    plot2.getLayer("gyroY 2").drawLines();
+  }
+  if (checkbox_gyroZ2.isSelected() == true) {
+    myIMU2.graph.points.gyroZ.add(time_Graph, myIMU2.value.gyroZ, "(" + "gyroZ2" + "," + time_Graph + " , " + myIMU2.value.gyroZ + ")");
+    plot2.setPoints(myIMU2.graph.points.gyroZ, "gyroZ 2");
+    plot2.getLayer("gyroZ 2").drawLines();
+  }
+  if (checkbox_compAngleX2.isSelected() == true) {
+    myIMU2.graph.points.compAngleX.add(time_Graph, myIMU2.value.compAngleX, "(" + "compAngleX2" + "," + time_Graph + " , " + myIMU2.value.compAngleX + ")");
+    plot2.setPoints(myIMU2.graph.points.compAngleX, "compAngleX 2");
+    plot2.getLayer("compAngleX 2").drawLines();
+  }
+  if (checkbox_compAngleY2.isSelected() == true) {
+    myIMU2.graph.points.compAngleY.add(time_Graph, myIMU2.value.compAngleY, "(" + "compAngleY2" + "," + time_Graph + " , " + myIMU2.value.compAngleY + ")");
+    plot2.setPoints(myIMU2.graph.points.compAngleY, "compAngleY 2");
+    plot2.getLayer("compAngleY 2").drawLines();
+  }
+  if (checkbox_tempRaw2.isSelected() == true) {
+    myIMU2.graph.points.tempRaw.add(time_Graph, myIMU2.value.tempRaw, "(" + "tempRaw2" + "," + time_Graph + " , " + myIMU2.value.tempRaw + ")");
+    plot2.setPoints(myIMU2.graph.points.tempRaw, "tempRaw 2");
+    plot2.getLayer("tempRaw 2").drawLines();
+  }
+  if (checkbox_tempCal2.isSelected() == true) {
+    myIMU2.graph.points.tempCal.add(time_Graph, myIMU2.value.tempCal, "(" + "tempCal2" + "," + time_Graph + " , " + myIMU2.value.tempCal + ")");
+    plot2.setPoints(myIMU2.graph.points.tempCal, "tempCal 2");
+    plot2.getLayer("tempCal 2").drawLines();
+  }
   plot2.endDraw();
 }
 

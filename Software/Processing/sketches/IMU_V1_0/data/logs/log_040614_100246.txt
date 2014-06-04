@@ -1,0 +1,91 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[10:2:37] Scanning Serial Ports.
+Available Serial Ports:
+COM5
+ 
+[10:2:39] Connecting IMU #1.
+IMU #1 connected.
+    Port: COM5  BaudRate: 9600
+ 
+[10:2:40] Communication Started.
+ 
+[10:2:40] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:40] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:41] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:41] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:42] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:42] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:42] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:42] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:43] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:43] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:44] Reading of IMU#1:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:44] Reading of IMU#2:
+Raw acc: 0  0  0
+Raw gyro: 0  0  0
+Comp angle: 0  0
+Temperature: 0  0
+ 
+[10:2:44] Communication Stopped.
+ 

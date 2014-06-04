@@ -1,0 +1,17 @@
+##############################
+GUI for xMotionPlus
+IMU developed by PXL
+Version 1.0, May 2014
+Glenn Kerselaers & Devlin Voets
+##############################
+ 
+[9:45:49] Scanning Serial Ports.
+Available Serial Ports:
+COM5
+ 
+[9:45:54] Connecting IMU #1.
+IMU #1 connected.
+    Port: COM5  BaudRate: 9600
+ 
+[9:46:4] Send <IMU #1>: I
+ 
